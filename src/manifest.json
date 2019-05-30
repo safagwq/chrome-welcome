@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "name": "safa的欢迎页 ^_^",
+    "version": "1.0",
+    "description": "safa的欢迎页 ^_^",
+    "permissions":["bookmarks","chrome://favicon/","storage"],
+    "chrome_url_overrides" : {
+        "newtab": "chromeIndex.html"
+    }
+}

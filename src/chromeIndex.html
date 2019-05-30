@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>safa的欢迎页 ^_^</title>
+    <style>
+        *{box-sizing:border-box;  margin:0px;  padding:0px;  }
+        html,body{height:100%;  width:100%;  font:14px/16px '';  }
+        body{white-space:nowrap;  background:url("https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/skin/34.jpg?2") 0 0/cover;  }
+
+        #input{position:absolute;  width:600px;  height:50px;  top:60px;  left:0;  right:0;  margin:auto;  font-size:18px;  padding:0 15px;  border-radius:5px;  border:1px solid #ccc;  outline:none;  animation:groupBlink 1.5s infinite;  }
+        #serach-list{position:absolute;  width:600px;  top:110px;  left:0;  right:0;  margin:auto;  z-index:9;  background:#fff;  overflow:auto;  box-shadow:0 0 15px rgba(0, 0, 0, 0.3);  border-radius:5px;  padding:0 10px;  }
+        #serach-list>a{display:block;  }
+
+        #tags{position:absolute;  width:600px;  left:0;  right:0;  top:120px;  bottom:0;  margin:auto;  }
+        #cont{display:flex;  transition:0.2s;  }
+
+        .bookmark-group{width:195px;  flex-shrink:0;  transition:0.2s;  background:rgba(255,255,255,0.7);  padding:10px;  margin-right:5px;  border-radius:5px;  }
+        .bookmark-group.checked{background:rgba(255,255,255,1);  animation:groupBlink 1.5s infinite;  z-index:1;  }
+        .bookmark-group-title{font-weight:700;  font-size:24px;  padding:20px 10px;  display:block;  color:#666;  }
+        .bookmark-group.checked .bookmark-group-title{color:#000;  }
+
+        .bookmark{display:block;  outline:none;  overflow:hidden;  text-overflow:ellipsis;  color:#666;  text-decoration:none;  padding:5px 10px;  margin:0 -10px;  transition:0.1s;  }
+        .bookmark.checked{background:#ccc;  color:#000;  transition:0s;  animation:bookmarkBlink 1.5s infinite;  }
+        .bookmark-title,
+        .bookmark-favicon{pointer-events:none;  }
+        .bookmark-favicon{float:left;  margin-right:5px;  }
+
+
+        @keyframes groupBlink{
+            0%,
+            100%{box-shadow:0 2px 30px rgba(0, 0, 0, 0.2)}
+            50%{box-shadow:0 2px 30px rgba(0, 0, 0, 0.4)}
+        }
+
+        @keyframes bookmarkBlink{
+            0%,
+            100%{background:#ccc;  }
+            50%{background:#aaa;  }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id='app'>
+        <input id='input' autoFocus>
+        <div id='serach-list'></div>
+        <div id='tags'>
+            <div id='cont'></div>
+        </div>
+    </div>
+    
+
+    <script src='jquery.min.js'></script>
+    <script src="PinYin.js"></script>
+    <script src="bookmarks.js"></script>
+</body>
+</html>
