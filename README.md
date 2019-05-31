@@ -1,4 +1,4 @@
 # chrome-welcome
 chrome标签欢迎页
 
-<video src="video/video.mp4">
+[查看效果](https://www.bilibili.com/video/av54206406/)
